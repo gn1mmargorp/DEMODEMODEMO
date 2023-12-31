@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(226, 226, 226);
+    font-family: 'Segoe UI';
+    position: relative;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.cart-icon {
+    font-size: 2rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.cart-icon:hover {
+    color: purple;
+}
+
+.cart {
+    display: none;
+    height: 300px;
+    width: 500px;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: white;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding: 15px;
+    color: rgb(85, 85, 85);
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: -3px 3px 4px rgba(206, 206, 206, 0.479)
+}
+
+.cart #cart-products {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.cart #remove-from-cart-button {
+    font-size: .7rem;
+    padding: 5px 7px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: rgb(151, 151, 151)
+}
+
+.cart #remove-from-cart-button:hover {
+    background-color: rgb(241, 241, 241)
+}
+
+.cart .close-cart-button {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: .7rem;
+    padding: 5px 7px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: rgb(151, 151, 151)
+}
+
+.cart .close-cart-button:hover {
+    background-color: rgb(241, 241, 241)
+}
+
+.cart img {
+    width: 65px;
+    height: 65px;
+}
+
+.main-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.8rem;
+    color: rgb(36, 36, 36);
+    word-spacing: .5rem;
+    font-weight: 100;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product img {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.product .title {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.product .description {
+    font-size: .8rem;
+    margin-bottom: 15px;
+}
+
+.product .price {
+    margin-bottom: 25px;
+    font-family: cursive;
+}
+
+.product .add-to-cart-button {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: purple;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.product .add-to-cart-button:hover {
+    opacity: .9
+}
+
+.product .add-to-cart-button:disabled {
+    opacity: .5;
+    cursor: auto
+}
+
+
+
+
+
+
+.login-register {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.login-register .login-button {
+    width: 110px;
+    padding: 7px;
+    background-color: purple;
+    border-radius: 7px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: none;
+    margin-right: 3px;
+}
+
+.login-register .register-button {
+    width: 110px;
+    padding: 7px;
+    background-color: black;
+    border-radius: 7px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+.logout-delete {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    
+}
+
+.logout-delete .logout-button {
+    width: 110px;
+    padding: 7px;
+    background-color: black;
+    border-radius: 7px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.logout-delete .delete-button {
+    width: 110px;
+    padding: 7px;
+    background-color: rgb(184, 0, 0);
+    border-radius: 7px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* REGISTER FORM */
+.register-form-wrapper {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .8);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#register-form {
+    background-color: black;
+    color: white;
+    width: 270px;
+    padding: 40px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px black;
+    position: relative;
+}
+
+#register-form h3 {
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+#register-form label {
+    display: block;;
+    font-size: .9rem
+}
+
+#register-form input {
+    margin-bottom: 20px;
+    font-size: .9rem;
+    outline: none;
+    padding: 1px 5px;
+}
+
+#register-form button {
+    padding: 7px;
+    background-color: rgb(165, 165, 165);
+    border-radius: 1rem;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s;
+    width: 188px;
+    margin-top: 5px
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ZAJEDNICKA KLASA ZA 'X' U OBJE FORME */
+.close-form-button {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    border-radius: 50%;
+    font-size: .75rem;
+    cursor: pointer;
+    color: silver;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .1rem .5rem .3rem .45rem;
+}
+.close-form-button:hover {
+    background-color: rgba(255, 255, 255, .2)
+}
+
+
+
+
+
+
+
+
+
+
+
+/* LOGIN FORM */
+.login-form-wrapper {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .8);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#login-form {
+    background-color: black;
+    color: white;
+    width: 270px;
+    padding: 40px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px black;
+    position: relative;
+}
+
+#login-form h3 {
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+#login-form label {
+    display: block;;
+    font-size: .9rem
+}
+
+#login-form input {
+    margin-bottom: 20px;
+    font-size: .9rem;
+    outline: none;
+    padding: 1px 5px;
+}
+
+#login-form button {
+    padding: 7px;
+    background-color: rgb(155, 155, 155);
+    border-radius: 1rem;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s;
+    width: 188px;
+    margin-top: 5px
+}
